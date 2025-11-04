@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Kopi Wantuneun</title>
+    <title>Beranda - Harmoni Musik Indonesia</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f5f2; /* Krem Lembut */
-            color: #382c20; /* Cokelat Gelap */
+            background-color: #f8f8f8; /* Latar belakang cerah */
+            color: #333;
         }
         /* Navigasi */
         .navbar {
-            background-color: #382c20;
+            background-color: #222; /* Hitam pekat */
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .navbar a {
-            color: white;
+            color: #eee; /* Abu-abu terang */
             text-decoration: none;
             padding: 10px 20px;
-            margin: 0 5px;
+            margin: 0 8px;
             font-size: 1.1em;
             font-weight: 500;
-            transition: background-color 0.3s;
-            border-radius: 4px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
         }
-        .navbar a:hover {
-            background-color: #d4844b; /* Cokelat Kopi */
+        .navbar a:hover, .navbar a.active {
+            color: #ffcc00; /* Kuning keemasan */
+            background-color: #333;
         }
         /* Hero Section */
         .hero {
-            /* Ganti placeholder ini dengan URL gambar coffee shop Anda */
+            /* Ganti placeholder ini dengan URL gambar alat musik yang bagus */
             background: url('') no-repeat center center/cover; 
-            height: 90vh; 
+            height: 90vh; /* Tinggi 90% dari viewport */
             color: white;
             display: flex;
             flex-direction: column;
@@ -43,82 +45,99 @@
             align-items: center;
             text-align: center;
             /* Lapisan gelap agar teks terbaca */
-            background-color: rgba(0, 0, 0, 0.4); 
+            background-color: rgba(0, 0, 0, 0.5); 
             background-blend-mode: darken;
             padding: 20px;
         }
         .hero h1 {
-            font-size: 4em;
-            margin-bottom: 5px;
+            font-family: 'Georgia', serif;
+            font-size: 4.5em;
+            margin-bottom: 10px;
             letter-spacing: 2px;
-            text-shadow: 2px 2px #382c20;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
         }
         .hero p {
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin-bottom: 40px;
             font-style: italic;
         }
         .btn {
-            background-color: #A0522D; /* Sienna */
-            color: white;
-            padding: 15px 35px;
+            background-color: #ffcc00; /* Kuning keemasan */
+            color: #222;
+            padding: 15px 40px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.2em;
             transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .btn:hover {
-            background-color: #6F4E37;
+            background-color: #e6b800; /* Kuning lebih gelap */
             transform: scale(1.05);
         }
         /* Bagian Konten */
         .content-section {
             width: 85%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
             text-align: center;
         }
         .content-section h2 {
-            color: #4A3A2C;
-            font-size: 2em;
+            color: #333;
+            font-size: 2.5em;
             margin-bottom: 10px;
-            border-bottom: 2px solid #E0C7A9;
+            border-bottom: 3px solid #ffcc00;
             display: inline-block;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
         }
-        .about-us, .highlights {
+        .about-text, .categories {
             margin-top: 30px;
             line-height: 1.8;
-            text-align: left;
+            text-align: justify;
         }
-        .highlights {
+        .categories {
             display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            margin-top: 30px;
+            flex-wrap: wrap; /* Agar bisa wrap ke bawah di layar kecil */
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
         }
-        .highlight-item {
+        .category-item {
             flex: 1;
+            min-width: 280px; /* Lebar minimum untuk item kategori */
+            max-width: 350px;
             background-color: white;
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
-        .highlight-item h4 {
-            color: #A0522D;
+        .category-item:hover {
+            transform: translateY(-5px);
+        }
+        .category-item h4 {
+            color: #333;
+            font-size: 1.5em;
             margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .category-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         /* Footer */
         .footer {
-            background-color: #382c20;
-            color: #f7f5f2;
+            background-color: #222;
+            color: #ccc;
             text-align: center;
-            padding: 25px 0;
-            margin-top: 50px;
+            padding: 30px 0;
+            margin-top: 60px;
             font-size: 0.9em;
         }
     </style>
@@ -127,43 +146,55 @@
 
     <nav class="navbar">
         <a href="index.html" class="active">BERANDA</a>
-        <a href="./menu.html">MENU</a> 
-        <a href="./layanan.html">LAYANAN</a> 
+        <a href="produk.html">PRODUK</a> 
+        <a href="layanan.html">LAYANAN</a> 
         <a href="tentang.html">TENTANG KAMI</a>
-        <a href="kontak.html">KONTAK</a>
+        <a href="tentang.html">KONTAK</a>
     </nav>
 
     <header class="hero">
-        <h1>Temukan Kopi Terbaik Anda</h1>
-        <p>Aroma Kopi Wantuneun, Kehangatan yang Memulai Hari Anda.</p>
-        <a href="menu.html" class="btn">JELAJAHI MENU KAMI</a>
+        <h1>Harmoni Musik Indonesia</h1>
+        <p>Temukan Irama Jiwa Anda di Sini.</p>
+        <a href="produk.html" class="btn">LIHAT KOLEKSI ALAT MUSIK</a>
     </header>
 
     <section class="content-section">
-        <h2>Tentang Kopi Wantuneun</h2>
-        <div class="about-us">
-            <p>Sejak 2025, Kopi Wantuneun berkomitmen menyajikan pengalaman kopi premium. Kami memilih biji kopi single origin terbaik dari petani lokal, diroasting dengan presisi, dan diseduh oleh barista yang bersemangat. Kami bukan hanya coffee shop, kami adalah ruang komunitas di mana cerita dan inspirasi bersemi.</p>
+        <h2>Selamat Datang di Harmoni Musik Indonesia</h2>
+        <div class="about-text">
+            <p>Harmoni Musik Indonesia adalah destinasi utama Anda untuk semua kebutuhan alat musik. Dari gitar klasik hingga keyboard modern, kami menyediakan beragam pilihan alat musik berkualitas tinggi untuk musisi dari semua tingkatan, baik pemula maupun profesional. Dengan staf ahli dan layanan pelanggan yang prima, kami berkomitmen untuk membantu Anda menemukan alat musik yang sempurna untuk mewujudkan setiap melodi dan harmoni Anda.</p>
         </div>
         
-        <h2>Mengapa Memilih Kami?</h2>
-        <div class="highlights">
-            <div class="highlight-item">
-                <h4>Kopi Pilihan Lokal</h4>
-                <p>Mendukung petani kopi Indonesia dengan menyajikan biji kopi terbaik dari berbagai daerah.</p>
+        <h2>Jelajahi Kategori Kami</h2>
+        <div class="categories">
+            <div class="category-item">
+                <img src="https://picsum.photos/300/180?random=1" alt="Gitar">
+                <h4>Gitar & Bass</h4>
+                <p>Akustik, Elektrik, Bass, dan Aksesoris.</p>
+                <a href="produk.html#gitar" class="btn" style="padding: 10px 20px; font-size: 1em;">Lihat Sekarang</a>
             </div>
-            <div class="highlight-item">
-                <h4>Suasana Cozy</h4>
-                <p>Desain interior yang hangat dan tenang, sempurna untuk bekerja, rapat, atau bersantai.</p>
+            <div class="category-item">
+                <img src="https://picsum.photos/300/180?random=2" alt="Keyboard">
+                <h4>Keyboard & Piano</h4>
+                <p>Digital Piano, Synthesizer, dan MIDI Controller.</p>
+                <a href="produk.html#keyboard" class="btn" style="padding: 10px 20px; font-size: 1em;">Lihat Sekarang</a>
             </div>
-            <div class="highlight-item">
-                <h4>Barista Profesional</h4>
-                <p>Setiap cangkir disajikan oleh barista ahli yang menjamin kualitas rasa dan seni latte.</p>
+            <div class="category-item">
+                <img src="https://picsum.photos/300/180?random=3" alt="Drum">
+                <h4>Drum & Perkusi</h4>
+                <p>Drum Akustik, Elektrik, Simbal, dan Aksesoris.</p>
+                <a href="produk.html#drum" class="btn" style="padding: 10px 20px; font-size: 1em;">Lihat Sekarang</a>
+            </div>
+             <div class="category-item">
+                <img src="https://picsum.photos/300/180?random=4" alt="Instrumen Tiup">
+                <h4>Instrumen Tiup</h4>
+                <p>Saxophone, Trompet, Flute, dan Clarinet.</p>
+                <a href="produk.html#tiup" class="btn" style="padding: 10px 20px; font-size: 1em;">Lihat Sekarang</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Kopi Wantuneun. Semua Hak Cipta Dilindungi.</p>
+        <p>&copy; 2025 Harmoni Musik Indonesia. Semua Hak Cipta Dilindungi.</p>
     </footer>
 
 </body>

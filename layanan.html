@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Kami - Harmoni Musik Indonesia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; 
+            color: #333;
+        }
+        /* Navigasi */
+        .navbar {
+            background-color: #222; 
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            color: #eee; 
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+        .navbar a:hover, .navbar a.active {
+            color: #ffcc00; 
+            background-color: #333;
+        }
+        
+        /* Konten Utama */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container h1 {
+            color: #222;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+        
+        /* Styling Layanan Card */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .service-card h2 {
+            color: #ffcc00;
+            font-size: 1.8em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .service-icon {
+            font-size: 3em;
+            color: #ffcc00;
+        }
+
+        /* Tombol */
+        .btn {
+            background-color: #00a896; /* Hijau (Aksi) */
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #008f80;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="produk.html">PRODUK</a> 
+        <a href="layanan.html" class="active">LAYANAN</a> 
+        <a href="tentang.html">TENTANG KAMI</a>
+        <a href="kontak.html">KONTAK</a>
+    </nav>
+
+    <div class="container">
+        <h1>Layanan Dukungan Musisi Kami</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #555;">Kami memberikan dukungan penuh untuk memastikan alat musik Anda selalu dalam kondisi terbaik dan semangat bermusik Anda terus terjaga.</p>
+        
+        <div class="service-grid">
+            
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h2>Jasa Servis & Perbaikan</h2>
+                <p>Tim teknisi bersertifikat kami siap memperbaiki dan merawat semua jenis alat musik Anda, dari setting gitar hingga reparasi keyboard.</p>
+                <a href="kontak.html#servis" class="btn">Jadwalkan Servis</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📦</div>
+                <h2>Pengiriman dan Garansi Resmi</h2>
+                <p>Kami menjamin pengiriman alat musik Anda sampai tujuan dengan aman. Setiap pembelian disertai garansi resmi dari distributor.</p>
+                <a href="tentang.html#garansi" class="btn">Lihat Kebijakan Garansi</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎤</div>
+                <h2>Sesi Konsultasi Alat</h2>
+                <p>Gratis konsultasi dengan staf ahli kami untuk memilih alat musik yang paling sesuai dengan genre musik dan tingkat keahlian Anda.</p>
+                <a href="kontak.html" class="btn">Hubungi Konsultan</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h2>Kelas Musik & Workshop</h2>
+                <p>Kami secara rutin mengadakan workshop dan kelas privat untuk membantu Anda menguasai teknik bermain alat musik yang baru.</p>
+                <a href="kontak.html#kelas" class="btn">Daftar Workshop</a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Harmoni Musik Indonesia. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>

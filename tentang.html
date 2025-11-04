@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Harmoni Musik Indonesia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; 
+            color: #333;
+        }
+        /* Navigasi */
+        .navbar {
+            background-color: #222; 
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            color: #eee; 
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+        .navbar a:hover, .navbar a.active {
+            color: #ffcc00; 
+            background-color: #333;
+        }
+        
+        /* Konten Utama */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container h1 {
+            color: #222;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+        
+        /* Bagian Sejarah */
+        .sejarah-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .sejarah-section h2 {
+            color: #ffcc00;
+            border-left: 5px solid #ffcc00;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Bagian Visi & Misi */
+        .visi-misi {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .visi-card, .misi-card {
+            flex: 1;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .visi-card {
+            background-color: #fffacd; /* Warna Krem Cerah */
+        }
+        .misi-card {
+            background-color: #e0ffff; /* Warna Biru Muda */
+        }
+        .visi-card h3, .misi-card h3 {
+            color: #222;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .visi-card ul, .misi-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .misi-card li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23222222" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>') no-repeat left 5px;
+            background-size: 16px;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="produk.html">PRODUK</a> 
+        <a href="layanan.html">LAYANAN</a> 
+        <a href="tentang.html" class="active">TENTANG KAMI</a>
+        <a href="kontak.html">KONTAK</a>
+    </nav>
+
+    <div class="container">
+        <h1>Mengenal Harmoni Musik Indonesia</h1>
+        
+        <section class="sejarah-section">
+            <h2>Perjalanan Kami</h2>
+            <p>Didirikan pada tahun *2010* oleh sekelompok musisi yang memiliki kecintaan mendalam terhadap instrumen musik, Harmoni Musik Indonesia dimulai dari sebuah toko kecil di Jakarta Selatan. Kami lahir dari kebutuhan akan toko alat musik yang tidak hanya menjual barang, tetapi juga menyediakan konsultasi jujur dan pelayanan purna jual yang andal.</p>
+            <p>Selama lebih dari satu dekade, kami telah berkembang menjadi salah satu penyedia alat musik terkemuka di Indonesia, didukung oleh jaringan distributor resmi dan teknisi profesional. Kami bukan sekadar toko; kami adalah rumah bagi para kreator melodi.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="https://picsum.photos/600/300?random=501" alt="Foto Tim Harmoni Musik" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+
+        <div class="visi-misi">
+            <div class="visi-card">
+                <h3>Visi Kami</h3>
+                <p>Menjadi platform utama dan terpercaya yang menginspirasi setiap individu di Indonesia untuk mengekspresikan diri melalui musik.</p>
+            </div>
+            <div class="misi-card">
+                <h3>Misi Kami</h3>
+                <ul>
+                    <li>Menyediakan alat musik original dan berkualitas tinggi dari merek ternama dunia.</li>
+                    <li>Memberikan layanan purna jual terbaik, termasuk konsultasi dan jasa perbaikan profesional.</li>
+                    <li>Menciptakan komunitas dan ruang bagi musisi untuk bertumbuh dan berbagi ilmu.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <section class="sejarah-section">
+            <h2>Nilai Inti Kami</h2>
+            <p>Integritas, Kualitas, dan Komunitas adalah tiga pilar yang menopang Harmoni Musik Indonesia. Kami percaya bahwa setiap interaksi, dari penjualan hingga perbaikan, harus didasarkan pada kepercayaan dan profesionalisme. Kami berkomitmen untuk menjadi mitra musik Anda seumur hidup.</p>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Harmoni Musik Indonesia. Diciptakan dengan Harmoni.</p>
+    </footer>
+
+</body>
+</html>

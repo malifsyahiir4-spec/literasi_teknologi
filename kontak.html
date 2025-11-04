@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Harmoni Musik Indonesia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; 
+            color: #333;
+        }
+        /* Navigasi */
+        .navbar {
+            background-color: #222; 
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            color: #eee; 
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+        .navbar a:hover, .navbar a.active {
+            color: #ffcc00; 
+            background-color: #333;
+        }
+        
+        /* Konten Utama */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container h1 {
+            color: #222;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        /* Layout Kontak */
+        .contact-layout {
+            display: flex;
+            gap: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+        
+        /* Styling Informasi Kontak */
+        .contact-info h2 {
+            color: #ffcc00;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .info-item {
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .info-item h4 {
+            margin: 0 0 5px 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+        
+        /* Styling Form */
+        .contact-form h2 {
+            color: #222;
+            margin-top: 0;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"], 
+        .form-group input[type="email"], 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Agar padding tidak melebihkan lebar total */
+            font-size: 1em;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Tombol Kirim */
+        .btn-submit {
+            background-color: #ffcc00;
+            color: #222;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #e6b800;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="produk.html">PRODUK</a> 
+        <a href="layanan.html">LAYANAN</a> 
+        <a href="tentang.html">TENTANG KAMI</a>
+        <a href="kontak.html" class="active">KONTAK</a>
+    </nav>
+
+    <div class="container">
+        <h1>Hubungi Kami</h1>
+        
+        <div class="contact-layout">
+            
+            <div class="contact-info">
+                <h2>Informasi Toko</h2>
+                <p style="margin-bottom: 30px;">Tim kami siap melayani pertanyaan Anda mengenai produk, servis, atau kerjasama.</p>
+                
+                <div class="info-item">
+                    <h4>Lokasi Utama</h4>
+                    <p>Jl. Melodi Indah No. 15, Blok A-7<br>Jakarta Selatan, 12780</p>
+                    <p>
+                        <a href="https://maps.google.com/?q=Toko+Alat+Musik" target="_blank" style="color: #ffcc00; text-decoration: none; font-weight: bold;">Lihat di Peta 
+
+[Image of a map pin]
+</a>
+                    </p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Telepon & Email</h4>
+                    <p>
+                        *Telepon:* (021) 123-4567<br>
+                        *WhatsApp:* +62 812-345-6789<br>
+                        *Email:* info@harmonimusik.com
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Sabtu: 09.00 - 20.00 WIB<br>Minggu: Tutup</p>
+                </div>
+                
+            </div>
+            
+            <div class="contact-form">
+                <h2>Kirim Pesan Kepada Kami</h2>
+                <form action="#" method="POST"> <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjek">Subjek Pesan</label>
+                        <input type="text" id="subjek" name="subjek" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pesan">Pesan Anda</label>
+                        <textarea id="pesan" name="pesan" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Harmoni Musik Indonesia. Hubungi kami untuk kebutuhan musik Anda.</p>
+    </footer>
+
+</body>
+</html>
